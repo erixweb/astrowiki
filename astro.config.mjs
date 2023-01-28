@@ -5,6 +5,6 @@ import vercel from '@astrojs/vercel/static';
 export default defineConfig({
     root: "astrowiki",
     publicDir: "public",
-    output: 'server',
+    output: 'static',
     adapter: vercel(),
 });
