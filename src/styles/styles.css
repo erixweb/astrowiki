@@ -45,10 +45,12 @@ highlight {
 }
 pre {
     padding: 8px;
+    border-radius: 4px;
 }
 code {
-    font-family: 'Cascadia Code', 'Courier New', Courier, monospace;
+    font-family: Operator Mono, Fira Code, Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
     font-size: 16px;
+    tab-size: 4;
 }
 /*
     Wrappers
@@ -91,5 +93,5 @@ Article list
 section#articles {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 10px;
+    gap: 20px;
 }

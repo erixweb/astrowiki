@@ -2,6 +2,7 @@
 import Logo from '../components/Logo.astro'
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
@@ -36,9 +37,16 @@ import Card from '../components/Card.astro';
 				body= "Hoy en día crear rutas para tu web es facilísimo y Astro, no se queda atrás."
 				href="/preguntas/routing"
 			/>
+			<Card
+				level="easy"
+				title= "¿Cómo crear componentes Astro?"
+				body= "En Astro los componentes son solo HTML, lo único que necesitas es conocimiento en HTML y a partir de ahí puedes crear tu componente de Astro."
+				href="/preguntas/components"
+			/>
 			
 
 		</section>
+		<Footer />
 	</body>
 	</html>
 </Layout>
