@@ -1,0 +1,32 @@
+---
+import '../styles/styles.css'
+import Back from '../components/Back.astro'
+
+
+const { frontmatter } = Astro.props
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Astro.js wiki | {frontmatter.title}</title>
+		<link rel="icon" href="/favicon.svg">
+        <meta name="title" content={"Astro.js wiki "+ frontmatter.title}>
+        <meta name="description" content={frontmatter.description}>
+        <meta name="keywords">
+	</head>
+    <body>
+        <article>
+            <Back />
+            <span>
+                {frontmatter.difficulty == "easy" ? <easy>Principiante</easy> : frontmatter.difficulty == "medium" ? <medium>Medio</medium> : <hard>Difícil</hard>}   
+            </span>
+            <h1>
+                {frontmatter.title}
+            </h1>
+            <slot />
+        </article>
+    </body>
+</html>

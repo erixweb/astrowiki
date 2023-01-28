@@ -1,0 +1,44 @@
+---
+import Logo from '../components/Logo.astro'
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout>
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Astro.js wiki</title>
+		<link rel="icon" href="./favicon.svg">
+	</head>
+	<body>
+		<main>
+			<h1>Astro.js Wiki</h1>
+			<p>
+				Encuentra solución a todas tus pregunta sobre Astro.js. Un framework de JavaScript hecho para hacer páginas web rápidas con el JavaScript necesario.
+				<Logo />
+			</p>
+			
+		</main>
+		<section id="articles">
+			<Card
+				level="easy"
+				title= "¿Qué son las Astro islands?"
+				body= "Las Astro islands es una forma para renderizar en la que tu página empieza con cero JavaScript y añade lo necesario."
+				href="/preguntas/islands"
+			/>
+			<Card
+				level="medium"
+				title= "¿Cómo hacer routing?"
+				body= "Hoy en día crear rutas para tu web es facilísimo y Astro, no se queda atrás."
+				href="/preguntas/routing"
+			/>
+			
+
+		</section>
+	</body>
+	</html>
+</Layout>
