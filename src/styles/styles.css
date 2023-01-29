@@ -11,7 +11,7 @@ body {
     width: 100%;
     min-height: 100vh;
 
-    background: linear-gradient(10deg, rgba(0, 155, 238, 0.134) 1%, #fff 80%);
+    background: linear-gradient(10deg, rgba(0, 155, 238, 0.129) 1%, #f3f3f3 80%);
 
 
 }
@@ -24,12 +24,12 @@ body * {
 easy {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-transform: uppercase;
-    color: rgb(96, 154, 7);
+    color: rgb(70, 117, 0);
 }
 medium {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-transform: uppercase;
-    color: rgb(255, 173, 42);
+    color: rgb(223, 154, 45);
 }
 hard {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -90,7 +90,7 @@ main p {
 /*
 Article list
 */
-section#articles {
+section#articles ol {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     gap: 20px;

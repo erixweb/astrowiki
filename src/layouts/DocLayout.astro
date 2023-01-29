@@ -6,7 +6,7 @@ import Back from '../components/Back.astro'
 const { frontmatter } = Astro.props
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,9 @@ const { frontmatter } = Astro.props
 		<link rel="icon" href="/favicon.svg">
         <meta name="title" content={"Astro.js wiki "+ frontmatter.title}>
         <meta name="description" content={frontmatter.description}>
-        <meta name="keywords">
+        <meta name="keywords" content={frontmatter.description}>
+        <meta name="og:title" content={"Astro.js wiki "+ frontmatter.title}>
+        <meta name="og:description" content={frontmatter.description}>
 	</head>
     <body>
         <article>

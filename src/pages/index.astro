@@ -7,13 +7,18 @@ import Footer from '../components/Footer.astro';
 
 <Layout>
 	<!DOCTYPE html>
-	<html lang="en">
+	<html lang="es">
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Astro.js wiki</title>
 		<link rel="icon" href="./favicon.svg">
+		<meta name="title" content="Astro.js wiki">
+		<meta name="description" content="Astro.js wiki es un sitio donde podrás resolver todas tus dudas sobre el framework de JavaScript Astro.js. Verás las preguntas mas frecuentes">
+		<meta name="keywords" content="Astro, Astro.js, astro.js wiki, astrowiki, astro wiki, erixweb astro, framework javascript astro, preguntas astro.js, wiki, astro.js information, astro.js información">
+		<meta name="og:title" content="Astro.js wiki">
+		<meta name="og:description" content="Astro.js wiki es un sitio donde podrás resolver todas tus dudas sobre el framework de JavaScript Astro.js. Verás las preguntas mas frecuentes">
 	</head>
 	<body>
 		<main>
@@ -22,9 +27,9 @@ import Footer from '../components/Footer.astro';
 				Encuentra solución a todas tus pregunta sobre Astro.js. Un framework de JavaScript hecho para hacer páginas web rápidas con el JavaScript necesario.
 				<Logo />
 			</p>
-			
 		</main>
 		<section id="articles">
+			<ol>
 			<Card
 				level="easy"
 				title= "¿Qué son las Astro islands?"
@@ -43,7 +48,7 @@ import Footer from '../components/Footer.astro';
 				body= "En Astro los componentes son solo HTML, lo único que necesitas es conocimiento en HTML y a partir de ahí puedes crear tu componente de Astro."
 				href="/preguntas/components"
 			/>
-			
+			</ol>
 
 		</section>
 		<Footer />
