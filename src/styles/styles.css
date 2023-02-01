@@ -96,6 +96,7 @@ main p {
 Article list
 */
 section#articles ol {
+    padding: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     gap: 20px;
@@ -103,5 +104,10 @@ section#articles ol {
 @media (max-width: 550px) {
     main, section, article {
         padding: 10px;
+    }
+}
+@media (max-width: 300px) {
+    svg {
+        display: none;
     }
 }

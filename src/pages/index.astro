@@ -19,6 +19,7 @@ import Footer from '../components/Footer.astro';
 		<meta name="keywords" content="Astro, Astro.js, astro.js wiki, astrowiki, astro wiki, erixweb astro, framework javascript astro, preguntas astro.js, wiki, astro.js information, astro.js información, astrojswiki, astrowiki, routing, rendering, islands">
 		<meta name="og:title" content="Astro.js wiki">
 		<meta name="og:description" content="Astro.js wiki es un sitio donde podrás resolver todas tus dudas sobre el framework de JavaScript Astro.js. Verás las preguntas mas frecuentes de Astro.js. Routing 🌐 Rendering 🦚 Islands 🏝️">
+		<meta name="og:image" content="favicon.svg">
 	</head>
 	<body>
 		<main>
@@ -30,32 +31,31 @@ import Footer from '../components/Footer.astro';
 		</main>
 		<section id="articles">
 			<ol>
-			<Card
-				level="easy"
-				title= "¿Qué son las Astro islands?"
-				body= "Las Astro islands es una forma para renderizar en la que tu página empieza con cero JavaScript y añade lo necesario."
-				href="/preguntas/islands"
-			/>
-			<Card
-				level="medium"
-				title= "¿Cómo hacer routing?"
-				body= "Hoy en día crear rutas para tu web es facilísimo y Astro, no se queda atrás."
-				href="/preguntas/routing"
-			/>
-			<Card
-				level="easy"
-				title= "¿Cómo crear componentes Astro?"
-				body= "En Astro los componentes son solo HTML, lo único que necesitas es conocimiento en HTML y a partir de ahí puedes crear tu componente de Astro."
-				href="/preguntas/components"
-			/>
-			<Card
-				level="hard"
-				title= "¿Cómo usar markdown con Astro?"
-				body= "Astro es compatible con Markdown. Usando Markdown y Astro podrás crear tu blog con markdown sin la necesidad de escribir todo en HTML."
-				href="/preguntas/markdown"
-			/>
+				<Card
+					level="easy"
+					title= "¿Qué son las Astro islands?"
+					body= "Las Astro islands es una forma para renderizar en la que tu página empieza con cero JavaScript y añade lo necesario."
+					href="/preguntas/islands"
+				/>
+				<Card
+					level="medium"
+					title= "¿Cómo hacer routing?"
+					body= "Hoy en día crear rutas para tu web es facilísimo y Astro, no se queda atrás."
+					href="/preguntas/routing"
+				/>
+				<Card
+					level="easy"
+					title= "¿Cómo crear componentes Astro?"
+					body= "En Astro los componentes son solo HTML, lo único que necesitas es conocimiento en HTML y a partir de ahí puedes crear tu componente de Astro."
+					href="/preguntas/components"
+				/>
+				<Card
+					level="hard"
+					title= "¿Cómo usar markdown con Astro?"
+					body= "Astro es compatible con Markdown. Usando Markdown y Astro podrás crear tu blog con markdown sin la necesidad de escribir todo en HTML."
+					href="/preguntas/markdown"
+				/>
 			</ol>
-
 		</section>
 		<Footer />
 	</body>
