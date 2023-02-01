@@ -47,10 +47,15 @@ pre {
     padding: 8px;
     border-radius: 4px;
 }
-code {
+code .line {
     font-family: Operator Mono, Fira Code, Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
     font-size: 16px;
     tab-size: 4;
+    color: #c9d1d9;
+}
+code {
+    font-weight: 600;
+    color:rgb(43, 149, 255);
 }
 /*
     Wrappers
@@ -94,4 +99,9 @@ section#articles ol {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     gap: 20px;
+}
+@media (max-width: 550px) {
+    main, section, article {
+        padding: 10px;
+    }
 }
