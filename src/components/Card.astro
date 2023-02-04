@@ -28,28 +28,29 @@ const { level, href, title, body } = Astro.props;
 </li>
 <style>
 	.link-card {
-		width: 100%;
+		width: 98%;
 		max-width: 400px;
 		list-style: none;
 		padding: 0.15rem;
 
 		background-color:  rgb(255, 255, 255);
-		border-radius: 7px;
-		transition: 400ms;
+		border-radius: 6px;
 
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.link-card a.link {
-		transition: 400ms;
+		transition: 250ms;
 		height: 100%;
 		width: 100%;
 		text-decoration: none;
 
 		margin-top: 0px;
 		line-height: 1.4;
-		padding: 1rem 1.3rem;
+		padding: 1rem;
 		border-radius: 0.35rem;
 		color: #111;
 		background-color: rgb(255, 255, 255);

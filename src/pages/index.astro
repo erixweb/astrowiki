@@ -2,7 +2,7 @@
 import Logo from '../components/Logo.astro'
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import Footer from '../components/Footer.astro';
+import Nav from '../components/Nav.astro';
 ---
 
 <Layout>
@@ -14,18 +14,26 @@ import Footer from '../components/Footer.astro';
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Astro.js wiki</title>
 		<link rel="icon" href="./favicon.svg">
+		<script defer>
+			window.addEventListener("load", () => {
+				let script = document.createElement("script")
+				script.src = "script.js"
+				document.querySelector("body").append(script)
+			})
+		</script>
 		<meta name="title" content="Astro.js wiki | Resuelve tus dudas de Astro.js">
 		<meta name="description" content="Astro.js wiki es un sitio donde podrás resolver todas tus dudas sobre el framework de JavaScript Astro.js. Verás las preguntas mas frecuentes de Astro.js. Routing 🌐 Rendering 🦚 Islands 🏝️">
-		<meta name="keywords" content="Astro, Astro.js, astro.js wiki, astrowiki, astro wiki, erixweb astro, framework javascript astro, preguntas astro.js, wiki, astro.js information, astro.js información, astrojswiki, astrowiki, routing, rendering, islands">
+		<meta name="keywords" content="Astro, Astro.js, astro.js wiki, astrowiki, astro wiki, erixweb astro, framework javascript astro, preguntas astro.js, wiki, astro.js information, astro.js información, astrojswiki, astrowiki, routing, rendering, islands, markdown">
 		<meta name="og:title" content="Astro.js wiki">
 		<meta name="og:description" content="Astro.js wiki es un sitio donde podrás resolver todas tus dudas sobre el framework de JavaScript Astro.js. Verás las preguntas mas frecuentes de Astro.js. Routing 🌐 Rendering 🦚 Islands 🏝️">
 		<meta name="og:image" content="favicon.svg">
 	</head>
 	<body>
+		<Nav />
 		<main>
 			<h1>Astro.js Wiki</h1>
 			<p>
-				Astro.js wiki es un sitio donde podrás resolver todas tus dudas sobre el framework de JavaScript Astro.js. Verás las preguntas mas frecuentes de Astro.js. Routing 🌐 Rendering 🦚 Islands 🏝️
+				Astro.js wiki es un sitio donde podrás resolver todas tus dudas sobre el framework de JavaScript Astro.js. Verás las preguntas mas frecuentes de Astro.js. Routing 🌐 Rendering 🦚 Islands 🏝️ Markdown ⬇️
 				<Logo />
 			</p>
 		</main>
@@ -55,9 +63,14 @@ import Footer from '../components/Footer.astro';
 					body= "Astro es compatible con Markdown. Usando Markdown y Astro podrás crear tu blog con markdown sin la necesidad de escribir todo en HTML."
 					href="/preguntas/markdown"
 				/>
+				<Card
+					level="medium"
+					title= "Scripting con Astro"
+					body= "En Astro tienes dos etiquetas para usar JavaScript, una es Server-side y otra Client-side. La principal que todo el mundo usa para importar sus compoenentes."
+					href="/preguntas/scripting"
+				/>
 			</ol>
 		</section>
-		<Footer />
 	</body>
 	</html>
 </Layout>
