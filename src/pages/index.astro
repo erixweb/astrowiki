@@ -1,37 +1,54 @@
 ---
-import Logo from '../components/Logo.astro'
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Nav from '../components/Nav.astro';
+import Logo from "../components/Logo.astro";
+import Card from "../components/Card.astro";
+import Nav from "../components/Nav.astro";
+import "../styles/styles.css";
 ---
 
-<Layout>
-	<!DOCTYPE html>
-	<html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Astro.js wiki</title>
-		<link rel="icon" href="./favicon.svg">
+		<link rel="icon" href="./favicon.svg" />
 		<script defer>
-			window.addEventListener("load",()=>{let e=document.createElement("script");e.src="script.js",document.querySelector("body").append(e)});
+			window.addEventListener("load", () => {
+				let e = document.createElement("script");
+				(e.src = "script.js"), document.querySelector("body").append(e);
+			});
 		</script>
-		<meta name="title" content="Astro.js wiki | Resuelve tus dudas de Astro.js">
-		<meta name="description" content="Astro.js wiki es un sitio donde podrás resolver todas tus dudas sobre el framework de JavaScript Astro.js. Verás las preguntas mas frecuentes de Astro.js. Routing 🌐 Rendering 🦚 Islands 🏝️">
-		<meta name="keywords" content="Astro, Astro.js, astro.js wiki, astrowiki, astro wiki, erixweb astro, framework javascript astro, preguntas astro.js, wiki, astro.js information, astro.js información, astrojswiki, astrowiki, routing, rendering, islands, markdown, astrowiki, astrojswiki, astrojs, astrojs wiki en español, astrojs islands wiki">
-        <meta name="theme-color" content="#FF1639">
-		<meta name="og:title" content="Astro.js wiki">
-		<meta name="og:description" content="Astro.js wiki es un sitio donde podrás resolver todas tus dudas sobre el framework de JavaScript Astro.js. Verás las preguntas mas frecuentes de Astro.js. Routing 🌐 Rendering 🦚 Islands 🏝️">
-		<meta name="og:image" content="favicon.svg">
-		
+		<meta
+			name="title"
+			content="Astro.js wiki | Resuelve tus dudas de Astro.js"
+		/>
+		<meta
+			name="description"
+			content="Astro.js wiki es un sitio donde podrás resolver todas tus dudas sobre el framework de JavaScript Astro.js. Verás las preguntas mas frecuentes de Astro.js. Routing 🌐 Rendering 🦚 Islands 🏝️"
+		/>
+		<meta
+			name="keywords"
+			content="Astro, Astro.js, astro.js wiki, astrowiki, astro wiki, erixweb astro, framework javascript astro, preguntas astro.js, wiki, astro.js information, astro.js información, astrojswiki, astrowiki, routing, rendering, islands, markdown, astrowiki, astrojswiki, astrojs, astrojs wiki en español, astrojs islands wiki"
+		/>
+		<meta name="theme-color" content="#FF1639" />
+		<meta name="og:title" content="Astro.js wiki" />
+		<meta
+			name="og:description"
+			content="Astro.js wiki es un sitio donde podrás resolver todas tus dudas sobre el framework de JavaScript Astro.js. Verás las preguntas mas frecuentes de Astro.js. Routing 🌐 Rendering 🦚 Islands 🏝️"
+		/>
+		<meta name="og:image" content="favicon.svg" />
 	</head>
 	<body>
 		<Nav />
 		<main>
 			<h1>Astro.js Wiki</h1>
 			<p>
-				Astro.js wiki es un sitio donde podrás resolver todas tus dudas sobre el framework de JavaScript Astro.js. Verás las preguntas mas frecuentes de Astro.js. Routing 🌐 Rendering 🦚 Islands 🏝️ Markdown ⬇️. Obtendrás todos las lecciones de forma gratuita en Español (es-ES). 
+				Astro.js wiki es un sitio donde podrás resolver todas tus dudas
+				sobre el framework de JavaScript Astro.js. Verás las preguntas
+				mas frecuentes de Astro.js. Routing 🌐 Rendering 🦚 Islands 🏝️
+				Markdown ⬇️. Obtendrás todos las lecciones de forma gratuita en
+				Español (es-ES).
 				<Logo />
 			</p>
 		</main>
@@ -39,42 +56,41 @@ import Nav from '../components/Nav.astro';
 			<ol>
 				<Card
 					level="easy"
-					title= "¿Qué es Astro?"
-					body= "Astrojs es un framework de JavaScript para crear aplicaciones web. En Astro.js puedes usar tu librería favorita como, React o Vue."
+					title="¿Qué es Astro?"
+					body="Astrojs es un framework de JavaScript para crear aplicaciones web. En Astro.js puedes usar tu librería favorita como, React o Vue."
 					href="/preguntas/astro"
 				/>
 				<Card
 					level="easy"
-					title= "¿Qué son las Astro islands?"
-					body= "Las Astro islands es una forma para renderizar en la que tu página empieza con cero JavaScript y añade lo necesario."
+					title="¿Qué son las Astro islands?"
+					body="Las Astro islands es una forma para renderizar en la que tu página empieza con cero JavaScript y añade lo necesario."
 					href="/preguntas/islands"
 				/>
 				<Card
 					level="medium"
-					title= "¿Cómo hacer routing?"
-					body= "Hoy en día crear rutas para tu web es facilísimo y Astro, no se queda atrás."
+					title="¿Cómo hacer routing?"
+					body="Hoy en día crear rutas para tu web es facilísimo y Astro, no se queda atrás."
 					href="/preguntas/routing"
 				/>
 				<Card
 					level="easy"
-					title= "¿Cómo crear componentes Astro?"
-					body= "En Astro los componentes son solo HTML, lo único que necesitas es conocimiento en HTML y a partir de ahí puedes crear tu componente de Astro."
+					title="¿Cómo crear componentes Astro?"
+					body="En Astro los componentes son solo HTML, lo único que necesitas es conocimiento en HTML y a partir de ahí puedes crear tu componente de Astro."
 					href="/preguntas/components"
 				/>
 				<Card
 					level="hard"
-					title= "¿Cómo usar markdown con Astro?"
-					body= "Astro es compatible con Markdown. Usando Markdown y Astro podrás crear tu blog con markdown sin la necesidad de escribir todo en HTML."
+					title="¿Cómo usar markdown con Astro?"
+					body="Astro es compatible con Markdown. Usando Markdown y Astro podrás crear tu blog con markdown sin la necesidad de escribir todo en HTML."
 					href="/preguntas/markdown"
 				/>
 				<Card
 					level="medium"
-					title= "Scripting con Astro"
-					body= "En Astro tienes dos etiquetas para usar JavaScript, una es Server-side y otra Client-side. La principal que todo el mundo usa para importar sus compoenentes."
+					title="Scripting con Astro"
+					body="En Astro tienes dos etiquetas para usar JavaScript, una es Server-side y otra Client-side. La principal que todo el mundo usa para importar sus compoenentes."
 					href="/preguntas/scripting"
 				/>
 			</ol>
 		</section>
 	</body>
-	</html>
-</Layout>
+</html>
