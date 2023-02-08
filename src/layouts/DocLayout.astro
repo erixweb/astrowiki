@@ -11,14 +11,14 @@ const { frontmatter } = Astro.props
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Astro.js wiki | {frontmatter.title}</title>
-        <link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/default.min.css">
-
 		<link rel="icon" href="/favicon.svg">
         <meta name="title" content={"Astro.js wiki "+ frontmatter.title}>
         <meta name="description" content={frontmatter.description}>
-        <meta name="keywords" content={frontmatter.description}>
+        <meta name="keywords" content={frontmatter.description.split(" ")}>
         <meta name="og:title" content={"Astro.js wiki "+ frontmatter.title}>
         <meta name="og:description" content={frontmatter.description}>
+		<meta name="og:image" content="favicon.svg">
+        <meta name="theme-color" content="#FF1639">
 	</head>
     <body>
         <article>

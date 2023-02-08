@@ -1,4 +1,4 @@
-// LocalStorage
+// Articles
 const useLocal = localStorage
 
 const totalArticles = document.querySelectorAll(".link-card").length

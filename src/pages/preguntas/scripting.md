@@ -2,7 +2,7 @@
 layout: ../../layouts/DocLayout.astro
 title: Scripting con Astro 🚀
 description: "En Astro tienes dos etiquetas para usar JavaScript, una es Server-side y otra Client-side. La principal que todo el mundo usa para importar sus compoenentes es la que empieza y acaba con `---`, este ejemplo es el que esta del lado del servidor (Server-side). En el siguiente ejemplo lo que vamos a hacer es importar una tarjeta y crearla en el HTML."
-difficulty: easy
+difficulty: medium
 draft: true
 ---
 En Astro tienes dos etiquetas para usar JavaScript, una es Server-side y otra Client-side. La principal que todo el mundo usa para importar sus compoenentes es la que empieza y acaba con `---`, este ejemplo es el que esta del lado del servidor (Server-side). En el siguiente ejemplo lo que vamos a hacer es importar una tarjeta y crearla en el HTML.

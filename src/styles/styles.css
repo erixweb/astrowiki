@@ -11,13 +11,11 @@ body  {
     width: 100%;
     min-height: 100vh;
 
-    background: linear-gradient(10deg, rgba(0, 155, 238, 0.09) 1%, #f3f3f3 80%);
+    background-color: #f3f3f3;
     position: relative;
-
-
 }
 body * {
-    margin-top: 20px;
+     margin-top: 20px;
 }
 /*
     Difficulties
