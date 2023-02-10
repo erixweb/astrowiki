@@ -1,3 +1,6 @@
+:root {
+    color-scheme: light;
+}
 * {
     margin: auto;
     padding: auto;
@@ -11,7 +14,7 @@ body  {
     width: 100%;
     min-height: 100vh;
 
-    background-color: #f3f3f3;
+    background: #f3f3f3;
     position: relative;
 }
 body * {
@@ -74,14 +77,33 @@ nav {
 
     padding: 8px;
     width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 nav button {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: transparent;
+    margin: 4px;
     padding: 8px;
-    border: 0.1px solid black;
     border-radius: 2px;
+    border: none;
     float: right;
+    border: 2px solid #e7e7e7;
+    border-radius: 7px;
+}
+nav span {
+    margin-top: 0px;
+}
+nav .themes:hover {
+    cursor: pointer;
+    border: 2px solid #55c9ff;
+}
+nav .theme {
+    font-size: 28px;
+}
+nav .light {
+    display: none;
 }
 /*
 Main
@@ -103,8 +125,6 @@ main h1, article h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top: 40px;
     font-size: 40px;
-    color: #000;
-    
 }
 main p {
     margin-top: 20px;
@@ -116,11 +136,19 @@ Article list
 section#articles ol {
     width: 100%;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+@media (max-width: 950px) {
+    section#articles ol {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 700px) {
+    section#articles ol {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
 }
 @media (max-width: 550px) {
     main, section, article {

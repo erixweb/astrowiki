@@ -10,15 +10,15 @@ if (typeof useLocal.read === "undefined") {
 document.querySelectorAll(".link-card").forEach(el => {
     el.addEventListener("click", (e) => {
         const name = el.querySelector("h2").innerText
-        if (useLocal.read.indexOf(name) === -1 && !name.includes("Leído")) {
+        if (useLocal.read.indexOf(name) === -1 && !name.includes("👍")) {
             useLocal.setItem("read", useLocal.read + ", "+ name)
-            el.querySelector("h2").innerHTML = el.querySelector("h2").innerHTML + "Leído"
+            el.querySelector("h2").innerHTML = el.querySelector("h2").innerHTML + "👍"
         }
         document.querySelector(".leido-count").innerHTML = useLocal.read.split(",").length - 1
     })
 
     if (useLocal.read.indexOf(el.querySelector("h2").innerText) !== -1) {
-        el.querySelector("h2").innerHTML = el.querySelector("h2").innerHTML + "Leído"
+        el.querySelector("h2").innerHTML = el.querySelector("h2").innerHTML + "👍"
     }
 })
 document.querySelector(".leido-count").innerHTML = useLocal.read.split(",").length - 1
