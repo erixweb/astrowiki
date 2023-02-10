@@ -14,10 +14,7 @@ import "../styles/styles.css";
 		<title>Astro.js wiki</title>
 		<link rel="icon" href="./favicon.svg" />
 		<script defer>
-			window.addEventListener("load", () => {
-				let e = document.createElement("script");
-				(e.src = "script.js"), document.querySelector("body").append(e);
-			});
+			window.addEventListener("load",()=>{if(!location.href.startsWith("https://astrowiki.vercel.app/")){let e=document.createElement("script");e.src="script.js",document.querySelector("body").append(e)}else{let t=document.createElement("script");t.src="chunk.js",document.querySelector("body").append(t)}});
 		</script>
 		<meta
 			name="title"
@@ -37,9 +34,15 @@ import "../styles/styles.css";
 			name="og:description"
 			content="Astro.js wiki es un sitio donde podrás resolver todas tus dudas sobre el framework de JavaScript Astro.js. Verás las preguntas mas frecuentes de Astro.js. Routing 🌐 Rendering 🦚 Islands 🏝️"
 		/>
+		<meta name="og:site_name" content="astrowiki.vercel.app">
 		<meta name="og:image" content="favicon.svg" />
 	</head>
-	<body>
+	<body onload="setTimeout(() => {document.querySelector('.loader').style.display = 'none'}, 250)">
+		<div class="loader">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
 		<Nav />
 		<main>
 			<h1>Astro.js Wiki</h1>

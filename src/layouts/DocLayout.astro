@@ -11,6 +11,9 @@ const { frontmatter } = Astro.props
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Astro.js wiki | {frontmatter.title}</title>
+        <script defer>
+			window.addEventListener("load",()=>{if(!location.href.startsWith("https://astrowiki.vercel.app/")){let e=document.createElement("script");e.src="/script.js",document.querySelector("body").append(e)}else{let t=document.createElement("script");t.src="/chunk.js",document.querySelector("body").append(t)}});
+		</script>
 		<link rel="icon" href="/favicon.svg">
         <meta name="title" content={"Astro.js wiki "+ frontmatter.title}>
         <meta name="description" content={frontmatter.description}>
@@ -20,7 +23,12 @@ const { frontmatter } = Astro.props
 		<meta name="og:image" content="favicon.svg">
         <meta name="theme-color" content="#FF1639">
 	</head>
-    <body>
+    <body onload="setTimeout(() => {document.querySelector('.loader').style.display = 'none'}, 250)">
+        <div class="loader">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
         <article>
             <Back />
             <span>

@@ -1,5 +1,10 @@
 :root {
-    color-scheme: light;
+   --bg-color: #f3f3f3;
+   --color: #000; 
+   --card-bg: #fff;
+   --card-h: #000;
+   --card-p: #444;
+   --card-focus: rgb(202, 234, 252);
 }
 * {
     margin: auto;
@@ -9,16 +14,56 @@
 body  {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 18px;
-    color: #000;
+    color: var(--color);
 
     width: 100%;
     min-height: 100vh;
 
-    background: #f3f3f3;
+    background: var(--bg-color);
     position: relative;
 }
 body * {
      margin-top: 20px;
+}
+/*
+    Loader
+*/
+.loader {
+    margin-top: 0px;
+    z-index: 99999;
+    background-color: #fff;
+    position: fixed;
+    top: 0px; 
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.loader div {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: #517994;
+    --webkit-animation: bounce 1s infinite alternate;
+    --moz-animation: bounce 1s infinite alternate;
+    --o-animation: bounce 1s infinite alternate;
+    animation: bounce 1s infinite alternate;
+}
+.loader div:nth-child(2) {
+    animation-delay: 300ms;
+}
+
+.loader div:nth-child(3) {
+    animation-delay: 600ms;
+}
+@keyframes bounce {
+    to {
+    opacity: .2;
+    }
 }
 /*
     Difficulties
@@ -26,7 +71,8 @@ body * {
 easy {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-transform: uppercase;
-    color: rgb(70, 117, 0);
+
+    color: rgb(117, 195, 0);
 }
 medium {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -38,14 +84,8 @@ hard {
     text-transform: uppercase;
     color: rgb(216, 84, 48);
 }
-highlight {
-    color: #fff;
-    padding-left: 6px;
-    padding-right: 6px;
-    background-color: rgb(17, 19, 49);
-    border-radius: 0px;
-}
 pre {
+    border: 1px solid #fff;
     padding: 8px;
     border-radius: 4px;
 }
@@ -82,27 +122,39 @@ nav {
     align-items: center;
 }
 nav button {
+    color: var(--color);
+}
+nav button, nav a.main {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: transparent;
     margin: 4px;
     padding: 8px;
     border-radius: 2px;
-    border: none;
     float: right;
     border: 2px solid #e7e7e7;
     border-radius: 7px;
 }
-nav span {
+nav svg {
+    width: 38px;
+    height: 38px;
     margin-top: 0px;
 }
-nav .themes:hover {
+nav a.main:hover, nav .themes:hover {
     cursor: pointer;
     border: 2px solid #55c9ff;
 }
-nav .theme {
-    font-size: 28px;
+/*
+    Themes
+*/
+.themes {
+    padding: 8px;
+    border: 2px solid #e7e7e7;
+    font-size: 32px;
 }
-nav .light {
+.themes span {
+    margin-top: 0px;
+}
+.themes .light {
     display: none;
 }
 /*
@@ -115,6 +167,7 @@ main p {
     align-items: center;
     max-width: 48rem;
     margin-left: 0px;
+    color: var(--color);
 }
 main p svg {
     width: 120px;
@@ -129,6 +182,56 @@ main h1, article h1 {
 main p {
     margin-top: 20px;
     width: 100%;
+}
+/*
+    Article
+*/
+.link-card {
+    width: 98%;
+    height: 100%;
+    list-style: none;
+    padding: 0.15rem;
+
+    background-color:  var(--card-bg);
+    border-radius: 6px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-card a.link {
+    transition: 250ms;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+
+    margin-top: 0px;
+    line-height: 1.4;
+    padding: 1rem;
+    border-radius: 0.35rem;
+    color: #111;
+    background-color: var(--card-bg);
+    opacity: 1;
+}
+h2 {
+    color: var(--card-h);
+    margin: 0;
+    font-size: 1.25rem;
+    transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+p {
+    font-size: 16px;
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    color: var(--card-p);
+}
+.link-card a.link:is(:hover, :focus-within) {
+    transform: scale(1.05);
+    background-color: var(--card-focus);
 }
 /*
 Article list
