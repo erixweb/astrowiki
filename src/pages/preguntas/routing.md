@@ -10,14 +10,14 @@ Hoy en día crear rutas para tu web es facilísimo y Astro, no se queda atrás.
 En Astro, existen las rutas estáticas. Las rutas estáticas son automáticas, por ejemplo src/pages/index.astro → tuweb.dev/ o tambíen src/pages/about.astro &rarr; tuweb.dev/about.
 
 Para navegar por tu página, simplemente tienes que usar un anchor.
-```
+```tsx
 <a href="/about">About</a>
 ```
 Además de eso, en Astro están las rutas dinámicas. Pueden ser muy útiles por ejemplo, cuando no quieres crear un archivo por cada uno de tus posts. `src/pages/post/[id].astro`, en este archivo lo que hara es detectar la URL, por ejemplo: `https://tusitio.dev/post/1` y con Astro podrás conseguir la `id`, que en este caso sería 1 y hacer por ejemplo un fetch a el post y devolver el contenido del post.
 
 Además de esto necesitarás usar la función getStaticPaths(), esta función devolvera una raíz de objetos con cada posible ruta. Es decir todos los posts que tenemos.
 
-```
+```tsx
 export function getStaticPaths() {
   return [
     {params: {id: 1}},
@@ -28,13 +28,13 @@ export function getStaticPaths() {
 ```
 
 Con esto conseguiremos que existan las rutas `tusitio.dev/post/1` `tusitio.dev/post/2` `tusitio.dev/post/3` y a partir de esto empezarías tu código. Y para conseguir la id usaremos la variable `Astro.params`, de esta manera: 
-```
+```tsx
 const { id } = Astro.params
 ```
 Y aquí un ejemplo de como usar todo esto
 
 `src/pages/post/[id].astro`
-```
+```tsx
 ---
 export function getStaticPaths() {
   return [

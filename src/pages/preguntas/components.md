@@ -8,7 +8,7 @@ draft: true
 En Astro los componentes son solo HTML, lo único que necesitas es conocimiento en HTML y a partir de ahí puedes crear tu componente de Astro. La sintaxis está hecha de una forma en la que se parece a JSX o HTML.
 
 La estructura de los componentes de Astro es la siguiente:
-```
+```tsx
 ---
 // Script en JavaScript ejecutado en el servidor
 ---
@@ -17,7 +17,7 @@ La estructura de los componentes de Astro es la siguiente:
 Por ejemplo vamos a crear un componente llamado `Button` en el que usando Astro.props vamos a hacer que necesite una propiedad llamada `name` que sera el nombre del botón.
 
 `src/components/Button.astro` 
-```
+```tsx
 ---
 export interface Props {
     name: string

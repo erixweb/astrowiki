@@ -9,7 +9,7 @@ Astro es compatible con Markdown. Usando Markdown y Astro podrás crear tu blog 
 Comenzemos desde lo fácil. En este ejemplo crearemos una página sin ningún estilo. Apenas un titulo y un pequeño contenido.
 
 `src/pages/blog.md` 
-```
+```md
 # Hola!
 Este es mi blog con `Astro`.
 Puedes usar todo tipo de etiquetas que Markdown soporte. 
@@ -20,7 +20,7 @@ Solo con acceder a `tusitio.dev/blog`, estarás accendiendo al blog. En este blo
 Ahora vamos a hacer que nuestro blog tenga un estilo, un titulo, y incluso una estructura. Para eso creamos un layout y por ejemplo haríamos lo siguiente:
 
 `src/layouts/Milayout.astro`
-```
+```tsx
 ---
 import 'estilos.css'
 
@@ -40,7 +40,7 @@ const { frontmatter } = Astro.props
 Y ahora en un archivo markdown haríamos lo siguiente:
 
 `src/pages/blog.md`
-```
+```mdx
 ---
 layout: ../../layouts/DocLayout.astro
 title: Mi blog
