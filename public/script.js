@@ -10,12 +10,11 @@ const setToDark = () => {
 	document.documentElement.style.setProperty("--card-h", "#fff")
 	document.documentElement.style.setProperty("--card-p", "#fff")
 	document.documentElement.style.setProperty("--card-focus", "#38b7ff")
-    /*
+	/*
 	document.querySelector(".dark").style.display = "none"
 	document.querySelector(".light").style.display = "block"
     */
 }
-console.log("E")
 
 const setToLight = () => {
 	useLocal.setItem("theme", "light")
@@ -32,6 +31,7 @@ if (useLocal.theme == "dark") {
 // Articles
 
 window.addEventListener("load", () => {
+	/*
     if (location.pathname === "/") {
         document.querySelector(".themes").addEventListener("click", () => {
             if (useLocal.theme === "dark") {
@@ -41,7 +41,8 @@ window.addEventListener("load", () => {
             }
         })
     }
-    if (location.pathname === "/") {
+		*/
+	if (location.pathname === "/") {
 		const totalArticles = document.querySelectorAll(".link-card").length
 
 		if (typeof useLocal.read === "undefined") {
@@ -53,14 +54,14 @@ window.addEventListener("load", () => {
 				const name = el.querySelector("h2").innerText
 				if (useLocal.read.indexOf(name) === -1 && !name.includes("👍")) {
 					useLocal.setItem("read", useLocal.read + ", " + name)
-					el.querySelector("h2").innerHTML = el.querySelector("h2").innerHTML + "👍"
+					el.querySelector(".is-read").innerHTML += "Leído"
 				}
 				document.querySelector(".leido-count").innerHTML =
 					useLocal.read.split(",").length - 1
 			})
 
 			if (useLocal.read.indexOf(el.querySelector("h2").innerText) !== -1) {
-				el.querySelector("h2").innerHTML = el.querySelector("h2").innerHTML + "👍"
+				el.querySelector(".is-read").innerHTML = "Leído"
 			}
 		})
 		document.querySelector(".leido-count").innerHTML = useLocal.read.split(",").length - 1

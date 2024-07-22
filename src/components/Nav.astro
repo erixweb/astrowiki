@@ -1,11 +1,15 @@
 ---
-import Github from "./Github.astro";
+import Github from "./Github.astro"
 ---
 
-<nav class="fixed top-0 left-0 w-full flex">
-    <a href="https://github.com/erixweb/astrowiki" class="main" target="_blank" rel="nofollow">
-        <Github />
-    </a>
+<nav class="fixed top-0 left-0 w-full">
+	<div class="w-full max-w-[100ch] m-auto p-[16px]">
+		<div class="float-right flex gap-[20px]">
+			<a href="https://github.com/erixweb/astrowiki" class="px-[12px] py-[6px] flex items-center gap-[10px] bg-slate-800 border-gray-400 border-2 rounded-[7px]" target="_blank" rel="nofollow">
+                <Github />
+                Github
+			</a>
+			<!--
     <button class="themes">
         <span class="dark">
             🌚
@@ -14,7 +18,12 @@ import Github from "./Github.astro";
             🌞
         </span>
     </button>
-    <button class="leido">
-        Leídos <span class="leido-count">0</span>/<span class="leido-total">0</span>
-    </button>
+     -->
+			<button
+				class="leido bg-slate-800 px-[12px] py-[6px] rounded-[7px] border-gray-400 border-2"
+			>
+				Leídos <span class="leido-count">0</span>/<span class="leido-total">0</span>
+			</button>
+		</div>
+	</div>
 </nav>

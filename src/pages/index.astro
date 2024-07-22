@@ -34,19 +34,9 @@ import Search from "../components/Search.astro"
 		<meta name="og:site_name" content="astrowiki.vercel.app" />
 		<meta name="og:image" content="favicon.svg" />
 	</head>
-	<body class="bg-[#121212] text-white">
-		<!--
-		onload={`${setTimeout(() => {
-			document.querySelector<HTMLElement>(".loader").style.display = "none"
-		}, 250)}`}
-		<div class="loader">
-			<div></div>
-			<div></div>
-			<div></div>
-		</div>
-		-->
+	<body class="bg-[#121212] text-white w-full text-[18px]">
 		<Nav />
-		<main class="mt-[100px] w-full max-w-[100ch] m-auto text-[18px] p-[16px]">
+		<main class="mt-[100px] w-full max-w-[100ch] m-auto p-[16px]">
 			<section class="py-[20px]">
 				<h1 class="text-[40px] font-bold font-[SpaceGrotesk] my-[20px]">Astro.js Wiki</h1>
 				<p>

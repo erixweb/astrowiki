@@ -9,20 +9,25 @@ export interface Props {
 const { level, href, title, body } = Astro.props
 ---
 
-<li class="link-card w-full bg-zinc-900 p-[16px] rounded-[7px] border-zinc-800 border-2 shadow-lg shadow-slate-900">
+<li
+	class="link-card w-full bg-zinc-900 p-[16px] rounded-[7px] border-zinc-800 border-2 shadow-lg shadow-slate-900"
+>
 	<a href={href} class="link">
 		<div class="content">
-			<span class="text-[15px]">
-				{
-					level == "easy" ? (
-						<easy>Principiante</easy>
-					) : level == "medium" ? (
-						<medium>Medio</medium>
-					) : (
-						<hard>Difícil</hard>
-					)
-				}
-			</span>
+			<div class="flex items-center justify-center h-[20px] my-[10px]">
+				<span class="text-[15px] w-full">
+					{
+						level == "easy" ? (
+							<easy>Principiante</easy>
+						) : level == "medium" ? (
+							<medium>Medio</medium>
+						) : (
+							<hard>Difícil</hard>
+						)
+					}
+				</span>
+				<div class="is-read text-gray-400 italic float-right mr-0"></div>
+			</div>
 			<h2 class="font-bold">
 				{title}
 				<span>&rarr;</span>
