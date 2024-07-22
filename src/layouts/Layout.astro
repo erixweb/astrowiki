@@ -1,4 +1,38 @@
 ---
+import ViewTransitions from 'astro/components/ViewTransitions.astro'
 import '../styles/styles.css'
 ---
-<slot />
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="./favicon.svg" />
+		<title>Astro.js wiki</title>
+		<script src="/script.js" is:inline></script>
+		<link rel="preload" href="/SpaceGrotesk.woff2" as="font" crossorigin="">
+        <ViewTransitions />
+		<meta name="title" content="Astro.js wiki | Resuelve tus dudas de Astro.js" />
+		<meta
+			name="description"
+			content="Astro.js wiki es un sitio donde podrás resolver todas tus dudas sobre el framework de JavaScript Astro.js. Verás las preguntas mas frecuentes de Astro.js. Routing 🌐 Rendering 🦚 Islands 🏝️"
+		/>
+		<meta
+			name="keywords"
+			content="Astro, Astro.js, astro.js wiki, astrowiki, astro wiki, erixweb astro, framework javascript astro, preguntas astro.js, wiki, astro.js information, astro.js información, astrojswiki, astrowiki, routing, rendering, islands, markdown, astrowiki, astrojswiki, astrojs, astrojs wiki en español, astrojs islands wiki"
+		/>
+		<meta name="theme-color" content="#FF1639" />
+		<meta name="og:title" content="Astro.js wiki" />
+		<meta
+			name="og:description"
+			content="Astro.js wiki es un sitio donde podrás resolver todas tus dudas sobre el framework de JavaScript Astro.js. Verás las preguntas mas frecuentes de Astro.js. Routing 🌐 Rendering 🦚 Islands 🏝️"
+		/>
+		<meta name="og:site_name" content="astrowiki.vercel.app" />
+		<meta name="og:image" content="favicon.svg" />
+	</head>
+	<body class="bg-[#121212] text-white w-full text-[18px]">
+		<slot />
+	</body>
+</html>
