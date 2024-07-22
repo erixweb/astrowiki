@@ -5,8 +5,8 @@ description: "Astro es compatible con Markdown. Usando Markdown y Astro podrás 
 difficulty: hard
 draft: true
 ---
-Astro es compatible con Markdown. Usando Markdown y Astro podrás crear tu blog con markdown sin la necesidad de escribir todo en HTML.
-Comenzemos desde lo fácil. En este ejemplo crearemos una página sin ningún estilo. Apenas un titulo y un pequeño contenido.
+
+Con Astro, ya **no tendrás que instalar ningún tipo de dependencia** para poder utilizar Markdown y hacer tu blog. Ya está integrado y simplemente debemos crear en `pages/` un archivo con la extensión de markdown `.md`.
 
 `src/pages/blog.md` 
 ```md
@@ -15,14 +15,14 @@ Este es mi blog con `Astro`.
 Puedes usar todo tipo de etiquetas que Markdown soporte. 
 ```
 
-Solo con acceder a `tusitio.dev/blog`, estarás accendiendo al blog. En este blog se vera tu contenido como se vería de normal con la excepción de que # seria un h1 y la palabra Astro estaría con una letra diferente a el resto del contenido.
+Al acceder a esta página, no tendrá sque escribir `/blog.md` en el navegador, ya que **Astro elimina automáticamente la extensión del archivo**. Simplemente puedes escribir **/blog**
 
 Ahora vamos a hacer que nuestro blog tenga un estilo, un titulo, y incluso una estructura. Para eso creamos un layout y por ejemplo haríamos lo siguiente:
 
 `src/layouts/Milayout.astro`
-```tsx
+```astro
 ---
-import 'estilos.css'
+import '/estilos.css'
 
 const { frontmatter } = Astro.props
 ---
