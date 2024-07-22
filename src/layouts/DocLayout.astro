@@ -1,43 +1,45 @@
 ---
-import '../styles/styles.css'
-import Back from '../components/Back.astro'
+import "../styles/styles.css"
+import Back from "../components/Back.astro"
 
 const { frontmatter } = Astro.props
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="es">
 	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="/favicon.svg" />
 		<title>Astro.js wiki | {frontmatter.title}</title>
-        <script defer>
-			window.addEventListener("load",()=>{if(!location.href.startsWith("https://astrowiki.vercel.app/")){let e=document.createElement("script");e.src="/script.js",document.querySelector("body").append(e)}else{let t=document.createElement("script");t.src="/chunk.js",document.querySelector("body").append(t)}});
-		</script>
-		<link rel="icon" href="/favicon.svg">
-        <meta name="title" content={"Astro.js wiki "+ frontmatter.title}>
-        <meta name="description" content={frontmatter.description}>
-        <meta name="keywords" content={frontmatter.description.split(" ")}>
-        <meta name="og:title" content={"Astro.js wiki "+ frontmatter.title}>
-        <meta name="og:description" content={frontmatter.description}>
-		<meta name="og:image" content="favicon.svg">
-        <meta name="theme-color" content="#FF1639">
+		<script src="/script.js" is:inline></script>
+		<meta name="title" content={"Astro.js wiki " + frontmatter.title} />
+		<meta name="description" content={frontmatter.description} />
+		<meta name="keywords" content={frontmatter.description.split(" ")} />
+		<meta name="og:title" content={"Astro.js wiki " + frontmatter.title} />
+		<meta name="og:description" content={frontmatter.description} />
+		<meta name="og:image" content="favicon.svg" />
+		<meta name="theme-color" content="#FF1639" />
 	</head>
-    <body onload="setTimeout(() => {document.querySelector('.loader').style.display = 'none'}, 250)">
-        <div class="loader">
-			<div></div>
-			<div></div>
-			<div></div>
-		</div>
-        <article>
-            <Back />
-            <span>
-                {frontmatter.difficulty == "easy" ? <easy>Principiante</easy> : frontmatter.difficulty == "medium" ? <medium>Medio</medium> : <hard>Difícil</hard>}   
-            </span>
-            <h1>
-                {frontmatter.title}
-            </h1>
-            <slot />
-        </article>
-    </body>
+	<body class="bg-[#121212] text-white">
+		<main class="mt-[100px] w-full max-w-[100ch] m-auto text-[18px] p-[16px]">
+			<Back />
+			<span>
+				{
+					frontmatter.difficulty == "easy" ? (
+						<easy>Principiante</easy>
+					) : frontmatter.difficulty == "medium" ? (
+						<medium>Medio</medium>
+					) : (
+						<hard>Difícil</hard>
+					)
+				}
+			</span>
+			<h1>
+				{frontmatter.title}
+			</h1>
+			<slot />
+		</main>
+	</body>
 </html>
