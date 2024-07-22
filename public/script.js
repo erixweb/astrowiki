@@ -30,7 +30,7 @@ if (useLocal.theme == "dark") {
 
 // Articles
 
-window.addEventListener("load", () => {
+document.addEventListener("astro:page-load", () => {
 	/*
     if (location.pathname === "/") {
         document.querySelector(".themes").addEventListener("click", () => {
