@@ -1,6 +1,6 @@
 ---
-import ViewTransitions from 'astro/components/ViewTransitions.astro'
-import '../styles/styles.css'
+import ViewTransitions from "astro/components/ViewTransitions.astro"
+import "../styles/styles.css"
 ---
 
 <!doctype html>
@@ -11,9 +11,10 @@ import '../styles/styles.css'
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" href="./favicon.svg" />
 		<title>Astro.js wiki</title>
+		<link rel="preload" href="/SpaceGrotesk.woff2" as="font" crossorigin="" />
 		<script src="/script.js" is:inline></script>
-		<link rel="preload" href="/SpaceGrotesk.woff2" as="font" crossorigin="">
-        <ViewTransitions />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+		<ViewTransitions />
 		<meta name="title" content="Astro.js wiki | Resuelve tus dudas de Astro.js" />
 		<meta
 			name="description"

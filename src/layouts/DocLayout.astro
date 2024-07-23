@@ -17,6 +17,7 @@ const { frontmatter } = Astro.props
 		<link rel="preload" href="/SpaceGrotesk.woff2" as="font" crossorigin="" />
 		<script src="/script.js" is:inline></script>
 		<ViewTransitions />
+		<link rel="sitemap" href="/sitemap-index.xml" />
 
 		<meta name="title" content={"Astro.js wiki " + frontmatter.title} />
 		<meta name="description" content={frontmatter.description} />
@@ -50,9 +51,9 @@ const { frontmatter } = Astro.props
 				margin-block: 15px;
 				line-height: 1.45rem;
 			}
-			main h2, h1 {
+			main h2,
+			h1 {
 				margin-top: 20px;
-				
 			}
 			main h2 {
 				font-size: 25px;
