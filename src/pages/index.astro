@@ -4,6 +4,7 @@ import Card from "../components/Card.astro"
 import Nav from "../components/Nav.astro"
 import "../styles/styles.css"
 // import Search from "../components/Search.astro"
+
 ---
 
 <Layout>
@@ -62,6 +63,12 @@ import "../styles/styles.css"
 					title="¿Cómo usar markdown con Astro?"
 					body="Astro es compatible con Markdown. Usando Markdown y Astro podrás crear tu blog con markdown sin la necesidad de escribir todo en HTML."
 					href="/preguntas/markdown"
+				/>
+				<Card
+					level="hard"
+					title="Islas del servidor (Server Islands)"
+					body="Las islas del servidor (Server Islands) hacen posible que puedas hacer toda tu página estática y cachearla mientras puedes seleccionar componentes que no sean estáticos y se rendericen en el servidor."
+					href="/preguntas/server-islands"
 				/>
 				<Card
 					level="medium"
