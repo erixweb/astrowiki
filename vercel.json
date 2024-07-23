@@ -1,0 +1,13 @@
+{
+    "headers": [
+      {
+        "source": "/SpaceGrotesk.woff2",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=172800, must-revalidate"
+          }
+        ]
+      }
+    ]
+  }
