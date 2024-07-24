@@ -32,7 +32,7 @@ const { name } = Astro.props
 En este código hemos definido que las propiedades (Props) posibles son `name`. En la interfaz Props podrías definir mas de una propiedad (la separación es sin comas, no hace falta ningun tipo de separación, simplemente un salto de linea servirá). Después de definir la propiedad name, en el código html, fuera de los ---, hemos hecho que la propiedad name se encuentre dentro de un botón.
 
 `src/pages/index.astro`
-```
+```astro
 ---
 import Button from '../components/Button.astro'
 ---
@@ -44,7 +44,7 @@ import Button from '../components/Button.astro'
 Este código es sinonimo de `<button>Click me</button>`, en este ejemplo los componentes son poco útiles pero podrán ser útiles cuando por ejemplo, necesitas hacer una tarjeta para cada uno de tus posts. En ese caso podríamos definir una propiedad llamada titulo y otra llamada descripción.
 
 `src/components/Card.astro`
-```
+```astro
 ---
 export interface Props {
     titulo: string
@@ -62,7 +62,7 @@ const { titulo, descripcion } = Astro.props
 ```
 `src/pages/index.astro`
 
-```
+```astro
 ---
 import Card from '../components/Card.astro'
 ---
@@ -83,14 +83,14 @@ Este código nos ha hecho ahorrarnos lineas y hacer un código mas limpio. Adem�
 En Astro existe el elemento `<slot />` en el que simplemente renderiza el HTML que hay dentro de una etiqueta. Es decir puede actuar como un div si lo usas de la siguiente forma:
 
 `src/components/Button.astro`
-```
+```astro
 <button>
     <slot />
 </button>
 ```
 
 `src/pages/index.astro`
-```
+```astro
 ---
 import Button from '../components/Button.astro'
 ---
