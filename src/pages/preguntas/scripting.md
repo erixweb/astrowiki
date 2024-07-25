@@ -45,7 +45,7 @@ document.querySelector("button").addEventListener("click", () => {
 ``` 
 
 En Astro, también podemos usar archivos TypeScript. Como en el siguiente ejemplo:
-```tsx
+```astro
 <button>Click me</button>
 <script src="/button.ts"></script>
 ``` 
