@@ -5,21 +5,28 @@ import Nav from "../components/Nav.astro"
 import "../styles/styles.css"
 // import Search from "../components/Search.astro"
 
+const posts = await Astro.glob("./preguntas/*.md")
+
 ---
 
 <Layout>
-	<div class="absolute top-0 bottom-0 z-[-2] h-screen max-h-[650px] w-full bg-[#0c111c]
+	<div
+		class="absolute top-0 bottom-0 z-[-2] h-screen max-h-[650px] w-full bg-[#0c111c]
       bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
-      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+	>
+	</div>
 	<Nav />
 	<main class="mt-[100px] w-full max-w-[100ch] m-auto p-[16px]">
 		<section class="py-[20px]">
 			<h1 class="text-[40px] font-bold font-[SpaceGrotesk] my-[20px]">Astro.js Wiki</h1>
 			<p>
-				Astro.js wiki es un sitio donde <strong class="text-[24px] animate-fade-in-right animate-duration-600 font-bold from-blue-400 to-blue-200 bg-gradient-to-r bg-clip-text text-transparent ">podrás resolver todas tus dudas</strong> sobre el framework
-				de JavaScript Astro.js. Verás las preguntas mas frecuentes de Astro.js. Routing 🌐
-				Rendering 🦚 Islands 🏝️ Markdown ⬇️. Obtendrás todos las lecciones de forma gratuita
-				en Español (es-ES).
+				Astro.js wiki es un sitio donde <strong
+					class="text-[24px] animate-fade-in-right animate-duration-600 font-bold from-blue-400 to-blue-200 bg-gradient-to-r bg-clip-text text-transparent"
+					>podrás resolver todas tus dudas</strong
+				> sobre el framework de JavaScript Astro.js. Verás las preguntas mas frecuentes de Astro.js.
+				Routing 🌐 Rendering 🦚 Islands 🏝️ Markdown ⬇️. Obtendrás todos las lecciones de forma
+				gratuita en Español (es-ES).
 			</p>
 			<!--
 			<div
@@ -36,49 +43,17 @@ import "../styles/styles.css"
 			 -->
 		</section>
 		<section id="articles" class="w-full">
-			<ol class="w-full m-auto grid grid-cols-3 gap-[20px] mt-[25px]">
-				<Card
-					level="easy"
-					title="¿Qué es Astro?"
-					body="Astrojs es un framework de JavaScript para crear aplicaciones web. En Astro.js puedes usar tu librería favorita como, React o Vue."
-					href="/preguntas/astro"
-				/>
-				<Card
-					level="easy"
-					title="¿Qué son las Astro islands?"
-					body="Las Astro islands es una forma para renderizar en la que tu página empieza con cero JavaScript y añade lo necesario."
-					href="/preguntas/islands"
-				/>
-				<Card
-					level="medium"
-					title="¿Cómo hacer routing?"
-					body="Hoy en día crear rutas para tu web es facilísimo y Astro, no se queda atrás."
-					href="/preguntas/routing"
-				/>
-				<Card
-					level="easy"
-					title="¿Cómo crear componentes Astro?"
-					body="En Astro los componentes son solo HTML, lo único que necesitas es conocimiento en HTML y a partir de ahí puedes crear tu componente de Astro."
-					href="/preguntas/components"
-				/>
-				<Card
-					level="hard"
-					title="¿Cómo usar markdown con Astro?"
-					body="Astro es compatible con Markdown. Usando Markdown y Astro podrás crear tu blog con markdown sin la necesidad de escribir todo en HTML."
-					href="/preguntas/markdown"
-				/>
-				<Card
-					level="hard"
-					title="Islas del servidor (Server Islands)"
-					body="Las islas del servidor (Server Islands) hacen posible que puedas hacer toda tu página estática y cachearla mientras puedes seleccionar componentes que no sean estáticos y se rendericen en el servidor."
-					href="/preguntas/server-islands"
-				/>
-				<Card
-					level="medium"
-					title="Scripting con Astro"
-					body="En Astro tienes dos etiquetas para usar JavaScript, una es Server-side y otra Client-side. La principal que todo el mundo usa para importar sus compoenentes."
-					href="/preguntas/scripting"
-				/>
+			<ol class="w-full m-auto grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-[20px] mt-[25px]">
+				{
+					posts.map((post) => (
+						<Card
+							level={post.frontmatter.difficulty}
+							title={post.frontmatter.title}
+							body={post.frontmatter.description}
+							href={post.url}
+						/>
+					))
+				}
 			</ol>
 		</section>
 	</main>
