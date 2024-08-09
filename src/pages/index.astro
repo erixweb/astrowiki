@@ -3,10 +3,10 @@ import Layout from "../layouts/Layout.astro"
 import Card from "../components/Card.astro"
 import Nav from "../components/Nav.astro"
 import "../styles/styles.css"
+import SearchBar from "../components/search-bar.svelte"
 // import Search from "../components/Search.astro"
 
 const posts = await Astro.glob("./preguntas/*.md")
-
 ---
 
 <Layout>
@@ -28,22 +28,12 @@ const posts = await Astro.glob("./preguntas/*.md")
 				Routing 🌐 Rendering 🦚 Islands 🏝️ Markdown ⬇️. Obtendrás todos las lecciones de forma
 				gratuita en Español (es-ES).
 			</p>
-			<!--
-			<div
-				class="w-full my-[20px] border-gray-400 border-2 rounded-[16px] p-[12px] flex gap-[20px]"
-			>
-				<Search />
-
-				<input
-					type="text"
-					class="w-full bg-transparent font-[SpaceGrotesk] font-bold text-[22px] border-none outline-none"
-					placeholder="Escribe tus dudas de Astro"
-				/>
-			</div>
-			 -->
+			<SearchBar posts={posts} client:load />
 		</section>
 		<section id="articles" class="w-full">
-			<ol class="w-full m-auto grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-[20px] mt-[25px]">
+			<ol
+				class="w-full m-auto grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-[20px] mt-[25px]"
+			>
 				{
 					posts.map((post) => (
 						<Card
