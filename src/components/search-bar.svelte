@@ -8,12 +8,11 @@
 	$: shownPosts = posts.filter((post) =>
 		post.frontmatter.title.toLowerCase().includes(query.toLowerCase()),
 	)
-	
 </script>
 
-<div class="w-full my-[20px] ">
-	<div>
-		<div class="flex gap-[20px] w-full p-[12px]	rounded-t-[16px] border-gray-400 border-2">
+<div class="w-full my-[20px]">
+	<div class="relative">
+		<div class="flex gap-[20px] w-full p-[12px] rounded-t-[16px] border-gray-400 border-2">
 			<Search />
 
 			<input
@@ -23,16 +22,19 @@
 				bind:value={query}
 			/>
 		</div>
-		<div class=" border-gray-400 border-2 w-full">
-			{#if query !== ""}
+		{#if query !== ""}
+			<div class=" border-gray-400 border-2 w-full absolute bg-zinc-900">
 				{#each shownPosts as post}
 					<div class="">
-						<a href={post.url} class="py-[10px] px-[20px] hover:bg-zinc-800 w-full block">
+						<a
+							href={post.url}
+							class="py-[10px] px-[20px] hover:bg-zinc-800 w-full block"
+						>
 							{post.frontmatter.title}
 						</a>
 					</div>
 				{/each}
-			{/if}
-		</div>
+			</div>
+		{/if}
 	</div>
 </div>

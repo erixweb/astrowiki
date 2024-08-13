@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/DocLayout.astro
-title: Componentes en Astro 🚀
+title: Componentes en Astro 🧩
 description: "En Astro los componentes son solo HTML, lo único que necesitas es conocimiento en HTML y a partir de ahí puedes crear tu componente de Astro."
 difficulty: easy
 draft: true
