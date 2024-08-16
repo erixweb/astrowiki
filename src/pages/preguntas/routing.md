@@ -3,7 +3,7 @@ layout: ../../layouts/DocLayout.astro
 title: Routing en Astro
 description: "Hoy en día crear rutas para tu web es facilísimo y Astro, no se queda atrás."
 difficulty: medium
-draft: true
+post_id: "5"
 ---
 
 ## Rutas estáticas

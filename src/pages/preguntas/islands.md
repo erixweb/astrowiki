@@ -3,7 +3,7 @@ layout: ../../layouts/DocLayout.astro
 title: Islands 🏝️
 description: "El concepto de las Islas consiste en que la página se renderice en el servidor y solo se use el JavaScript necesario."
 difficulty: easy
-draft: true
+post_id: "3"
 ---
 
 Por defecto, cuando creas tu proyecto de Astro, **empiezas con CERO JavaScript**. Las islas, lo que **permiten es que puedas añadir interactividad** a tu página sin la necesidad de que todos los componentes se rendericen en el servidor. Solo se renderizan los necesarios.

@@ -3,7 +3,7 @@ layout: ../../layouts/DocLayout.astro
 title: Islas del Servidor (Server Islands)
 description: "Las islas del servidor (Server Islands) hacen posible que puedas hacer toda tu página estática y cachearla mientras puedes seleccionar componentes que no sean estáticos y se rendericen en el servidor."
 difficulty: hard
-draft: true
+post_id: "7"
 ---
 
 Las islas del servidor (Server Islands) hacen posible que **puedas hacer toda tu página estática** y cachearla **mientras puedes crear componentes concretos que se rendericen en el servidor** y no sean estáticos.

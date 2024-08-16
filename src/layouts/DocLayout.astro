@@ -16,7 +16,7 @@ const { frontmatter } = Astro.props
 		<title>Astro.js wiki | {frontmatter.title}</title>
 		<link rel="preload" href="/SpaceGrotesk.woff2" as="font" type="font/woff2" crossorigin />
 		<script src="/script.js" is:inline></script>
-		<ViewTransitions />
+		<ViewTransitions fallback="animate" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
 
 		<meta name="title" content={"Astro.js wiki " + frontmatter.title} />
@@ -41,9 +41,10 @@ const { frontmatter } = Astro.props
 					)
 				}
 			</span>
-			<h1 class="">
-				{frontmatter.title}
-			</h1>
+			<h2 class="font-bold text-[40px]">
+				<span>{frontmatter.title}</span>
+				<span>&rarr;</span>
+			</h2>
 			<slot />
 		</main>
 		<style is:global>

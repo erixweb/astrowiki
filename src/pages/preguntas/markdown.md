@@ -3,7 +3,7 @@ layout: ../../layouts/DocLayout.astro
 title: Markdown & Astro
 description: "Astro es compatible con Markdown. Usando Markdown y Astro podrás crear tu blog con markdown sin la necesidad de escribir todo en HTML."
 difficulty: hard
-draft: true
+post_id: "4"
 ---
 
 Con Astro, ya **no tendrás que instalar ningún tipo de dependencia** para poder utilizar Markdown y hacer tu blog. Ya está integrado y simplemente debemos crear en `pages/` un archivo con la extensión de markdown `.md`.

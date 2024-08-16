@@ -3,7 +3,7 @@ layout: ../../layouts/DocLayout.astro
 title: Astro 🚀
 description: "Astrojs es un framework de JavaScript para crear aplicaciones web. En Astro.js puedes usar tu librería favorita como, React o Vue."
 difficulty: easy
-draft: true
+post_id: "1"
 ---
 Astro.js es un **framework de JavaScript** para crear aplicaciones web. En Astro.js puedes usar tu librería favorita como, React o Vue. 
 

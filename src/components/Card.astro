@@ -4,9 +4,10 @@ export interface Props {
 	title: string
 	body: string
 	href: string
+	id: string
 }
 
-const { level, href, title, body } = Astro.props
+const { level, href, title, body, id } = Astro.props
 ---
 
 <a
@@ -29,11 +30,11 @@ const { level, href, title, body } = Astro.props
 			<div class="is-read text-gray-400 italic float-right mr-0"></div>
 		</div>
 		<h2 class="font-bold text-[20px]">
-			{title}
+			<span>{title}</span>
 			<span>&rarr;</span>
 		</h2>
 		<p class="text-[15px] my-[10px]">
 			{body}
 		</p>
 	</div>
-</a>
+</>

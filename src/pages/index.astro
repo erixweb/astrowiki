@@ -41,6 +41,7 @@ const posts = await Astro.glob("./preguntas/*.md")
 							title={post.frontmatter.title}
 							body={post.frontmatter.description}
 							href={post.url}
+							id={post.frontmatter.post_id}
 						/>
 					))
 				}
