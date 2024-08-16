@@ -8,6 +8,15 @@
             "value": "public, max-age=172800, must-revalidate"
           }
         ]
+      },
+      {
+        "source": "/",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=500, must-revalidate"
+          }
+        ]
       }
     ]
   }
