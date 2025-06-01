@@ -19,15 +19,22 @@ const posts = await Astro.glob("./preguntas/*.md")
 	<Nav />
 	<main class="mt-[100px] w-full max-w-[100ch] m-auto p-[16px]">
 		<section class="py-[20px]">
-			<h1 class="text-[40px] font-bold font-[SpaceGrotesk] my-[20px]">Astro.js Wiki</h1>
-			<p>
-				Astro.js wiki es un sitio donde <strong
-					class="text-[24px] animate-fade-in-right animate-duration-600 font-bold from-blue-400 to-blue-200 bg-gradient-to-r bg-clip-text text-transparent"
-					>podrás resolver todas tus dudas</strong
-				> sobre el framework de JavaScript Astro.js. Verás las preguntas mas frecuentes de Astro.js.
-				Routing 🌐 Rendering 🦚 Islands 🏝️ Markdown ⬇️. Obtendrás todos las lecciones de forma
-				gratuita en Español (es-ES).
-			</p>
+			<div class="flex">
+				<div class="max-w-xl">
+					<h1 class="text-[40px] font-bold font-[SpaceGrotesk] my-[20px]">
+						Astro.js Wiki
+					</h1>
+					<p>
+						Astro.js wiki es un sitio donde <strong
+							class="text-[24px] animate-fade-in-right animate-duration-600 font-bold from-blue-400 to-blue-200 bg-gradient-to-r bg-clip-text text-transparent"
+							>podrás resolver todas tus dudas</strong
+						> sobre el framework de JavaScript Astro.js. Verás las preguntas mas frecuentes
+						de Astro.js. Routing 🌐 Rendering 🦚 Islands 🏝️ Markdown ⬇️. Obtendrás todos
+						las lecciones de forma gratuita en Español (es-ES).
+					</p>
+				</div>
+				<img src="favicon.svg" alt="" class="max-w-[200px]" style="filter: drop-shadow(4px 4px 5rem white);">
+			</div>
 			<SearchBar posts={posts} client:load />
 		</section>
 		<section id="articles" class="w-full">
