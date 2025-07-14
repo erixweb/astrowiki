@@ -1,6 +1,6 @@
 ---
-import ViewTransitions from "astro/components/ViewTransitions.astro"
-import "../styles/styles.css"
+import ClientRouter from "astro/components/ClientRouter.astro"
+import "../styles/global.css"
 ---
 
 <!doctype html>
@@ -13,7 +13,7 @@ import "../styles/styles.css"
 		<title>Astro.js wiki</title>
 		<link rel="preload" href="/SpaceGrotesk.woff2" as="font" type="font/woff2" crossorigin />
 		<script src="/script.js" is:inline></script>
-		<ViewTransitions fallback="animate" />
+		<ClientRouter fallback="animate" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<meta name="title" content="Astro.js wiki | Resuelve tus dudas de Astro.js" />
 		<meta
