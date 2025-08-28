@@ -62,6 +62,12 @@
     ascent-override:88.75%;descent-override:26.34%;line-gap-override:0.00%;size-adjust:110.87%
 }
 
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 1fr auto;
+}
+
 /* CSS Variables for backward compatibility */
 :root {
    --bg-color: #f3f3f3;
@@ -89,4 +95,14 @@ hard {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/* Custom heading styles */
+/* Custom page transition animation */
+
+@keyframes page-transition {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+
+}

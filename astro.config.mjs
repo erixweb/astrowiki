@@ -1,5 +1,5 @@
 import { defineConfig } from "astro/config"
-import vercel from "@astrojs/vercel/serverless"
+import vercel from "@astrojs/vercel"
 import tailwindcss from "@tailwindcss/vite"
 import sitemap from "@astrojs/sitemap"
 import svelte from "@astrojs/svelte"
@@ -7,7 +7,7 @@ import svelte from "@astrojs/svelte"
 // https://astro.build/config
 export default defineConfig({
 	publicDir: "public",
-	output: "server",
+	output: "static",
 	adapter: vercel(),
 	site: "https://astrowiki.vercel.app",
 	integrations: [sitemap(), svelte()],
