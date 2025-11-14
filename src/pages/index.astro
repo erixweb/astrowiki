@@ -39,9 +39,9 @@ const posts = await Astro.glob("./preguntas/*.md")
 			</div>
 			<SearchBar posts={posts} client:load />
 		</section>
-		<section id="articles" class="w-full">
+		<section id="articles" class="w-full z-10">
 			<ol
-				class="w-full mx-auto grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-5 mt-6"
+				class="w-full mx-auto grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-5 mt-6 z-10 relative"
 			>
 				{
 					posts.map((post) => (
